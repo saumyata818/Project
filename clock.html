@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        body {
+          
+    
+            font-family: 'Arial', sans-serif;
+            background-color: #1cc973;
+            color: rgb(161, 130, 143);
+            display: flex;
+            flex-direction: column;
+            justify-content: top;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+      background: url('https://www.shutterstock.com/image-vector/vector-seamless-pattern-featuring-charming-600nw-2436352475.jpg') repeat;
+      background-size: cover; 
+  
+        }
+        h2 {
+            padding-bottom: 60px;          
+            font-size: 2.5rem;
+            margin-bottom: 90px;
+            font-family: linear-gradient;
+            letter-spacing: 3px;
+            color:#1e1e2f;
+        }
+        #clock {
+            font-size: 4rem;
+            font-weight: bold;
+            padding: 20px;
+            border: 5px solid #f7d154;
+            border-radius: 15px;
+            background: linear-gradient(145deg,  #1e1e2f , #252535);
+            box-shadow: 5px 5px 10px #141419, -5px -5px 10px #282838;
+            
+       }
+    </style>
+</head>
+<body>
+    
+    <p id="clock"></p>
+    
+  <br>
+  <br>
+  <br>
+  
+<iframe   width="50%" z-index:-1 height="25%" z-index:-1 src="https://www.youtube.com/embed/g0eO74UmRBs?autoplay=1&loop=1&playlist=g0eO74UmRBs" frameborder="0" allow="autoplay encrypted-media" allowfullscreen;></iframe>
+
+
+
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, "0");
+            const minutes = String(now.getMinutes()).padStart(2, "0");
+            const seconds = String(now.getSeconds()).padStart(2, "0");
+            document.getElementById("clock").innerText = `${hours}:${minutes}:${seconds}`;
+        }
+        
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+</html>
